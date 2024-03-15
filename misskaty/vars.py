@@ -1,7 +1,4 @@
-# * @author        Yasir Aris M <yasiramunandar@gmail.com>
-# * @date          2023-06-21 22:12:27
-# * @projectName   MissKatyPyro
-# * Copyright ©YasirPedia All rights reserved
+
 import sys
 from logging import getLogger
 from os import environ
@@ -12,24 +9,24 @@ LOGGER = getLogger("MissKaty")
 
 dotenv.load_dotenv("config.env", override=True)
 
-if API_ID := environ.get("API_ID", ""):
+if API_ID := environ.get("API_ID", "11457698"):
     API_ID = int(API_ID)
 else:
     LOGGER.error("API_ID variable is missing! Exiting now")
     sys.exit(1)
-API_HASH = environ.get("API_HASH", "")
+API_HASH = environ.get("API_HASH", "4000b13f-01ff-4be8-beba-26ef349bfaab")
 if not API_HASH:
     LOGGER.error("API_HASH variable is missing! Exiting now")
     sys.exit(1)
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "6356489499:AAFWxSMqix4No96ux-WdGBvWKH8q3tmMe0U")
 if not BOT_TOKEN:
     LOGGER.error("BOT_TOKEN variable is missing! Exiting now")
     sys.exit(1)
-DATABASE_URI = environ.get("DATABASE_URI", "")
+DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://Aakash:zatrop@cluster0.h71fvqs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 if not DATABASE_URI:
     LOGGER.error("DATABASE_URI variable is missing! Exiting now")
     sys.exit(1)
-if LOG_CHANNEL := environ.get("LOG_CHANNEL", ""):
+if LOG_CHANNEL := environ.get("LOG_CHANNEL", "1097379245"):
     LOG_CHANNEL = int(LOG_CHANNEL)
 
 else:
@@ -50,10 +47,10 @@ SUDO = list(
         ).split()
     }
 )
-SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "YasirPediaChannel")
+SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "#")
 AUTO_RESTART = environ.get("AUTO_RESTART", False)
-OPENAI_KEY = environ.get("OPENAI_KEY")
-GOOGLEAI_KEY = environ.get("GOOGLEAI_KEY")
+OPENAI_KEY = environ.get("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")
+GOOGLEAI_KEY = environ.get("AIzaSyBsJlGcK07lLL6q13LbDPIbXwp3-CrZTgg")
 
 ## Config For AUtoForwarder
 # Forward From Chat ID
@@ -62,13 +59,13 @@ FORWARD_FROM_CHAT_ID = list(
         int(x)
         for x in environ.get(
             "FORWARD_FROM_CHAT_ID",
-            "-1001128045651 -1001455886928 -1001686184174",
+            "-1097379245 -1097379245 -1097379245",
         ).split()
     }
 )
 # Forward To Chat ID
 FORWARD_TO_CHAT_ID = list(
-    {int(x) for x in environ.get("FORWARD_TO_CHAT_ID", "-1001210537567").split()}
+    {int(x) for x in environ.get("FORWARD_TO_CHAT_ID", "-1097379245").split()}
 )
 FORWARD_FILTERS = list(set(environ.get("FORWARD_FILTERS", "video document").split()))
 BLOCK_FILES_WITHOUT_EXTENSIONS = bool(
@@ -83,4 +80,4 @@ BLOCKED_EXTENSIONS = list(
     )
 )
 MINIMUM_FILE_SIZE = environ.get("MINIMUM_FILE_SIZE")
-CURRENCY_API = environ.get("CURRENCY_API")
+CURRENCY_API = environ.get("8DIIPVROWD8S2CLJ")
