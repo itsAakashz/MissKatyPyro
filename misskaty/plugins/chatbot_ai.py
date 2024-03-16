@@ -22,8 +22,8 @@ __HELP__ = """
 /ai - Generate text response from AI using Gemini AI By Google.
 /ask - Generate text response from AI using OpenAI.
 """
-OPENAI_KEY = environ.get("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")
-GOOGLEAI_KEY = environ.get("AIzaSyBsJlGcK07lLL6q13LbDPIbXwp3-CrZTgg")
+OPENAI_KEY ="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"
+GOOGLEAI_KEY ="AIzaSyBsJlGcK07lLL6q13LbDPIbXwp3-CrZTgg"
 
 @app.on_message(filters.command("ai", COMMAND_HANDLER) & pyro_cooldown.wait(10))
 @use_chat_lang()
