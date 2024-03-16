@@ -9,12 +9,12 @@ LOGGER = getLogger("MissKaty")
 
 dotenv.load_dotenv("config.env", override=True)
 
-if API_ID := environ.get("API_ID", "11457698"):
+if API_ID := environ.get("API_ID", "20909078"):
     API_ID = int(API_ID)
 else:
     LOGGER.error("API_ID variable is missing! Exiting now")
     sys.exit(1)
-API_HASH = environ.get("API_HASH", "4000b13f-01ff-4be8-beba-26ef349bfaab")
+API_HASH = environ.get("API_HASH", "fcedef3ceb6011991b4f499ed84d889d")
 if not API_HASH:
     LOGGER.error("API_HASH variable is missing! Exiting now")
     sys.exit(1)
